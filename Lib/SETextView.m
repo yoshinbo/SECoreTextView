@@ -123,6 +123,10 @@ static NSString * const PARAGRAPH_SEPARATOR = @"\u2029";
 - (void)setupTextEditingControls
 {
     self.caretView = [[SETextEditingCaret alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 2.0f, 0.0f)];
+
+    if (!self.caretColor) {
+      self.caretView.backgroundColor = self.caretColor;
+    }
     [self addSubview:self.caretView];
 }
 #endif
@@ -2060,7 +2064,7 @@ static NSString * const PARAGRAPH_SEPARATOR = @"\u2029";
     if (text.length == 0) {
         CGPoint origin = CGPointMake(CGRectGetMinX(self.bounds), CGRectGetMinY(self.bounds));
         UIFont *font = self.font ? self.font : [UIFont systemFontOfSize:[UIFont labelFontSize]];
-        return CGRectMake(origin.x, origin.y, CGRectGetWidth(self.caretView.bounds), font.leading);
+        return CGRectMake(origin.x, origin.y, CGRectGetWidth(self.caretView.bounds), font.lineHeight);
     }
     
     if (index >= text.length) {
