@@ -123,10 +123,6 @@ static NSString * const PARAGRAPH_SEPARATOR = @"\u2029";
 - (void)setupTextEditingControls
 {
     self.caretView = [[SETextEditingCaret alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 2.0f, 0.0f)];
-
-    if (!self.caretColor) {
-      self.caretView.backgroundColor = self.caretColor;
-    }
     [self addSubview:self.caretView];
 }
 #endif

@@ -40,7 +40,7 @@
 + (UIColor *)caretColor
 {
 #if TARGET_OS_IPHONE
-    return [UIColor colorWithRed:0.118 green:0.447 blue:0.871 alpha:1.000];
+    return [UIColor colorWithRed:1.000 green:0.800 blue:0.200 alpha:1.000];
 #else
     return [NSColor colorWithCalibratedRed:0.118 green:0.447 blue:0.871 alpha:1.000];
 #endif
