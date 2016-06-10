@@ -121,6 +121,7 @@ typedef NS_ENUM(NSUInteger, SETextAttachmentDrawingOptions) {
 #if TARGET_OS_IPHONE
 - (void)insertAttributedText:(NSAttributedString *)attributedText;
 - (void)insertObject:(id)object size:(CGSize)size;
+- (void)replaceRange:(UITextRange *)range withText:(NSString *)text;
 #endif
 
 - (void)clearSelection;
